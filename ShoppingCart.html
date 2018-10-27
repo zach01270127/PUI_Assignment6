@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart | BunBun Bake Shop</title>
+    <link rel="stylesheet" href="styles.css">
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+    
+    <a href="Home.html"><img class="logo" alt="BunBunBakeShop" src="assets/logo.png" ></a>
+    <img class="r3" alt="rec3" src="assets/rectangle1.png" >
+        <a href="ShoppingCart.html"><img class="shoppingcart" alt="ShoppingCart" src="assets/shopping_cart.png" ></a>
+        <p class="cartNumber" id="count-cart" >0</p>
+    <nav>
+          <a class="other" href="Home.html">Home</a> 
+          <a class="chosen" href="Product.html" >All Products</a> 
+          <a class="other">Shipping</a> 
+          <a class="other">About</a>
+
+    </nav>
+
+    
+    <div id="shoppingCartBG">      
+    <div id="countInfo">You have <span id="count-cart2">X</span> items in your cart. Total is <span id="total-cart"> 0 </span> $ </div> 
+
+                <ul id="show-cart">
+                    <!-- -->
+                
+                </ul>
+                <ul id="total-cart">
+                    <!-- -->
+                
+                </ul> 
+        
+                
+     <button class="button button2" id="checkout2">Check Out</button>
+    </div>  
+    
+    <script src="main.js"></script>
+    
+     <script>
+
+        // load the cart information from local storage and display
+         shoppingCart.loadCart();  
+         
+         function displaytCart(){
+                var cartArray = shoppingCart.listCart();
+                var output = "";
+                
+                for (var i in cartArray){
+                    output += "<li>"
+                        +cartArray[i].count+" "+cartArray[i].name+" "+" <div class='smallText'> with</div> "+cartArray[i].glazing+" glazing "+"<button class='delete-item button' data-glazing='"+cartArray[i].glazing+"' data-name='"+cartArray[i].name+"'>Remove</button>  "
+                    "</li>"
+                }
+                    $("#show-cart").html(output);
+                    $("#count-cart").html(shoppingCart.countCart());
+                    $("#total-cart").html(shoppingCart.totalCart());
+                    $("#count-cart2").html(shoppingCart.countCart());
+            }
+            
+         
+         //delete items with same glazing in the cart
+            $("#show-cart").on("click",".delete-item",function(event){    
+                var glazing = $(this).attr("data-glazing");
+                var name = $(this).attr("data-name");
+                shoppingCart.removeItemToCartAll(name,glazing);
+                console.log(name);
+                console.log(glazing);
+                displaytCart();
+                
+            });
+
+        
+
+            displaytCart(); 
+            
+                
+            
+            
+            
+            
+            
+            
+            
+
+        </script>
+    
+    
+    
+    
+    
+    

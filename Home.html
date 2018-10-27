@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | BunBun Bake Shop</title>
+    <link rel="stylesheet" href="styles.css">
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+ <body>   
+    <a href="Home.html"><img class="logo" alt="BunBunBakeShop" src="assets/logo.png" ></a>
+
+        <a href="ShoppingCart.html"><img class="shoppingcart" alt="ShoppingCart" src="assets/shopping_cart.png" ></a>
+    <p class="cartNumber" id="count-cart" >0</p>
+    
+
+    <img class="r1" src="assets/rectangle1.png" alt="rec1" >
+
+    <img class="home" alt="CinnamonRoll" src="assets/home_cinnamon.png" >
+
+    
+<nav>
+              <a class="chosen" style="text-decoration:none" href="Home.html">Home</a> 
+            
+          <a class="other" href="Product.html" style="text-decoration:none">All Products</a> 
+          <a class="other">Shipping</a> 
+          <a class="other">About</a>
+
+    </nav>
+
+
+
+    
+    <div>
+        <p class="p1">We Deliver Cinnamon Rolls</p>
+        <p class="p2">in Pittsburgh!</p>
+         <img class="r2" alt="rec2" src="assets/rectangle2.png" >
+        <button class="button button1" onclick="location.href='Product.html'" type="button">Start Shopping</button>
+        <p class="p3">Check Shipping Availability ⇢ </p>
+        
+    </div>
+    
+    <script src="main.js"></script>
+    
+    <script>
+
+         shoppingCart.loadCart();  
+         
+         function displaytCart(){
+                var cartArray = shoppingCart.listCart();
+                var output = "";
+                
+                for (var i in cartArray){
+                    output += "<li>"
+                        +cartArray[i].count+" "+cartArray[i].name+" "+" bun " + " <div class='smallText'>with</div> "+cartArray[i].glazing+" glazing "+"<button class='delete-item button' data-glazing='"+cartArray[i].glazing+"'>Remove</button>  "
+                    "</li>"
+                }
+                    $("#show-cart").html(output);
+                    $("#count-cart").html(shoppingCart.countCart());
+                    $("#total-cart").html(shoppingCart.totalCart());
+                    $("#count-cart2").html(shoppingCart.countCart());
+            }
+            
+            $("#show-cart").on("click",".delete-item",function(event){    
+                var glazing = $(this).attr("data-glazing");
+                shoppingCart.removeItemToCartAll(glazing);
+                displaytCart();
+                
+            });
+
+        
+
+            displaytCart(); 
+            
+                
+            
+            
+            
+            
+            
+     </script>    
+            
+
+</body>

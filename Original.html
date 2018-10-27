@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Original | BunBun Bake Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+    
+<body>
+        
+    <a href="Home.html"><img class="logo" alt="BunBunBakeShop" src="assets/logo.png" ></a>
+    <img class="r3" alt="rec3" src="assets/rectangle1.png" >
+    
+    <div class="shoppingcart">
+        <a href="ShoppingCart.html"><img class="shoppingcart" alt="ShoppingCart" src="assets/shopping_cart.png" ></a>
+        <p class="cartNumber" id="count-cart" >0</p>
+    </div>    
+        
+    <nav>
+          <a class="other" href="Home.html">Home</a> 
+          <a class="chosen" href="Product.html" >All Products</a> 
+          <a class="other">Shipping</a> 
+          <a class="other">About</a>
+
+    </nav>
+    
+    <div class="productdetail">
+        <img class="popup" alt="PopUp" src="assets/pop-up.png">
+        <p class="detailtitle">Original</p>
+        <img class="productimage" alt="Original" src="assets/cinnamon_product.png">
+        <p class="price">$3/ea.</p>
+
+        <p class="options">Quantity<br><br>
+        Glazing</p>
+            <select class="choosequan">
+              <option data-name="Original" value=1 id="one" selected>1</option>
+              <option data-name="Original" value=3 id="three">3</option>
+              <option data-name="Original" value=6 id="six" >6</option> 
+              <option data-name="Original" value=12 id="twelve">12</option>
+            </select>
+        
+            <div class="glazing">
+
+                
+                <select class="glazingopt">
+                  <option id="none" selected>None</option>
+                  <option id="sugar-milk">Sugar-Milk</option>
+                  <option id="vannila-milk" >Vannila-Milk</option> 
+                  <option id="double-chocolate">Double-Chocolate</option>
+                </select>
+
+    </div>
+        <div>
+        
+        <button class="button button2 add-to-cart"  id="addtocart"  type="button">Add to Cart</button>
+        <button class="button button2" id="checkout"  type="button">Check Out</button>
+        
+    </div>
+
+</div>
+
+    
+    
+    <script src="main.js"></script>
+    
+     <script>
+                        
+           //add to cart function 
+            $(".add-to-cart").click(function(event){
+                event.preventDefault();
+                var name = "Original";
+                var price = 3;
+                var count = Number($( ".choosequan" ).val());
+                var glazing = $( ".glazingopt option:selected" ).text();
+                console.log(name);
+                console.log(price);
+                console.log(count);
+                console.log(glazing);
+                shoppingCart.addItemToCart(name,price,count,glazing)
+                displaytCart();
+            });
+         
+
+            //display the cart
+                function displaytCart(){
+                var cartArray = shoppingCart.listCart();
+                var output = "";
+                
+                         for (var i in cartArray){
+                    output += "<li>"
+                        +cartArray[i].name+" "+cartArray[i].count+" "+cartArray[i].glazing+" x "+cartArray[i].price+" = "+cartArray[i].total+" <button class='delete-item button' data-glazing='"+cartArray[i].glazing+"' data-name='"+cartArray[i].name+"'>Remove</button>  "
+                    "</li>"
+                }
+                    $("#show-cart").html(output);
+                    $("#count-cart").html(shoppingCart.countCart());
+                    $("#count-cart2").html(shoppingCart.countCart());
+                    $("#total-cart").html(shoppingCart.totalCart());  
+            }
+            
+            $("#show-cart").on("click",".delete-item",function(event){    
+                var glazing = $(this).attr("data-glazing");
+                var name = $(this).attr("data-name");
+                shoppingCart.removeItemToCartAll(name,glazing);
+                displaytCart();
+            });
+
+        
+
+            displaytCart(); 
+                
+            
+            
+            
+            
+            
+            
+            
+
+        </script>
+    
+    
+    </body>
+    
+

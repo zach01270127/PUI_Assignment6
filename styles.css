@@ -1,0 +1,515 @@
+body
+{
+    background-color: #F7F5F6;
+
+}
+
+img.logo
+{
+    position: absolute;
+    left: 108px;
+    top: 40px;
+    z-index:5
+    
+}
+
+img.r3
+{
+    width: 100px ; height:5px;
+    position: absolute;
+    left:910px;
+    top:118px;
+     z-index: 2;
+
+    
+}
+
+img.r1
+{
+    position: absolute;
+    left:816px;
+    top:118px;
+    z-index: 2;
+    
+}
+
+
+img.r2
+{
+    position: absolute;
+    left:996px;
+    top:485px;
+     z-index: 2;
+    
+}
+
+img.prdctimg
+{
+    padding: 125px;
+}
+
+img.prdctimg2
+{
+    padding: 300px;
+}
+
+div.a1
+{   
+    position: absolute;
+    left:85px;
+    top:153px;
+
+    
+}
+
+div.a2
+{   
+    position: absolute;
+    left:130px;
+    top:500px;
+
+}
+
+img.shoppingcart
+{
+    position: absolute;
+    left:1313px;
+    top:93px;
+     z-index: 5;
+    
+}
+
+.cartNumber
+{
+    position: absolute;
+    left:1350px;
+    top:80px;
+     z-index: 6;
+    font-family: AvenirNextCondensed-DemiBold;
+    font-size: 24px;
+    color: coral;
+    
+}
+
+
+img.home
+{
+    position: absolute;
+    left:0px;
+    top:71px;
+    z-index: 1;
+    
+}
+
+nav
+{
+    position: absolute;
+    left:787px;
+    top:97px;
+     z-index: 5;
+    
+}
+
+a
+{
+    margin: 24px
+}
+
+
+a.chosen{
+    font-family: AvenirNextCondensed-DemiBold;
+    font-size: 24px;
+    color: #000000;
+    letter-spacing: 0.24px;
+    text-align: left;
+    text-decoration:none
+}
+
+
+a.other
+{
+    font-family: AvenirNextCondensed-Regular;
+    font-size: 20px;
+    color: #000000;
+    letter-spacing: 0.2px;
+    text-decoration:none
+    
+}
+
+
+
+p.p1
+{
+    position: absolute;
+    left:912px;
+    top:383px;
+    font-family: AvenirNextCondensed-DemiBold;
+    font-size: 32px;
+    color: rgba(0,0,0,0.72);
+    letter-spacing: 0.36px;
+    text-align: center;
+    z-index: 5;
+    
+}
+
+p.p2
+{
+    position: absolute;
+    left:984px;
+    top:422px;
+    font-family: AvenirNextCondensed-DemiBold;
+    font-size: 36px;
+    color: rgba(0,0,0,0.72);
+    letter-spacing: 0.36px;
+    text-align: center;
+    line-height: 44px;
+    z-index: 5;
+    
+}
+
+
+p.p3{
+    position: absolute;
+    left:995px;
+    top:716px;
+    font-family: AvenirNextCondensed-Italic;
+    font-size: 16px;
+    color: #797979 ;
+    letter-spacing: 0.32px;
+    z-index: 5;
+}
+
+
+.button 
+{
+    background-color: #B55330; /* Green */
+
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.2s;
+    cursor: pointer;
+    z-index: 5;
+    font-family: AvenirNextCondensed-Bold;
+    font-size: 18px;
+    letter-spacing: 0.17px;
+    letter-spacing: 0.17px;
+    border-radius: 4px;
+}
+
+.button:hover{
+     background-color:transparent;
+    border-color: #B55330;
+    border-radius: 100px;
+    color:#B55330;
+}
+
+
+.button1 {
+    position: absolute;
+    left:930px;
+    top:638px;
+    background-color: transparent; 
+    color:#B55330; 
+    border: 0.5px solid #AA674F;
+    border-radius:12px;
+    margin: 4px 2px;
+    padding: 16px 72px;
+}
+
+.button1:hover 
+{
+    background-color: #B55330;
+    color: white;
+    border: 0.5px solid #AA674F;
+}
+
+.button2
+{
+    background-color: transparent; 
+    color:#B55330; 
+    border: 0.5px solid #AA674F;
+    border-radius:48px;
+    margin: 4px 2px;
+    padding: 8px 32px;
+    font-family: AvenirNextCondensed-DemiBold;
+    font-size: 20px;
+    color: #B55330;
+    letter-spacing: 0.17px;
+}
+
+
+.button2:hover 
+{
+    background-color: #B55330;
+    color: white;
+    border: 0.5px solid #AA674F;
+}
+
+div.a2
+{
+    position: absolute;
+    left:230px;
+    top:484px;
+}
+
+
+.product1btn
+{
+    display: block;
+    vertical-align: center; 
+}
+
+.product1
+{
+    display: block;
+    vertical-align: center;
+}
+
+
+#original
+{
+    position: absolute;
+    left: 236px;
+    top:278px;
+}
+
+
+#blackberry
+{
+    position: absolute;
+    left: 669px;
+    top:278px;
+}
+
+#walnut
+{
+    position: absolute;
+    left: 1077px;
+    top:278px;
+
+}
+
+#pumpkin
+{
+    position: absolute;
+    left: 236px;
+    top:580px;
+
+}
+
+#peacon
+{
+    position: absolute;
+    left: 670px;
+    top:580px;
+
+}
+
+#glutenfree
+{
+    position: absolute;
+    left: 1077px;
+    top:580px;
+}
+
+
+.prdctname
+{
+    font-family: AvenirNextCondensed-DemiBold;
+    font-size: 20px;
+    color: #000000;
+    letter-spacing: 0.2px;
+    line-height: 16px;
+    
+}
+
+
+#originalimg
+{
+    width:155px;
+    height: 90px;
+}
+
+
+
+.productbackground
+ {
+
+    background-image: url("assets/background.png");
+
+}
+
+
+
+
+
+
+.productdetail
+{
+    position: absolute;
+    left:100px;
+    top:200px;
+}
+
+
+.popup
+{
+    position: relative;
+ 
+    left:0px;
+    top:0px;
+    z-index: 2;
+}
+
+
+.productimage
+{
+        position: absolute;
+    left:0px;
+    top:36px;
+    z-index: 3;
+}
+
+
+.detailtitle
+{
+    position: absolute;
+    left:600px;
+    top:85px;
+    font-family: AvenirNextCondensed-Bold;
+    font-size: 36px;
+    color: rgba(0,0,0,0.71);
+    z-index: 5;
+}
+
+.price
+{
+    position: absolute;
+    left:1020px;
+    top:85px;
+    font-family: AvenirNextCondensed-Medium;
+    font-size: 28px;
+    color: #000000; 
+    z-index: 5;
+}
+
+
+.close
+{
+    position: absolute; 
+    left:1177px;
+    top:32px;
+    z-index: 5;
+}
+
+.options
+{
+    position: absolute; 
+    left:600px;
+    top:189px;
+    z-index: 5;
+    font-family: AvenirNextCondensed-DemiBold;
+    font-size: 24px;
+    color: rgba(0,0,0,0.65);
+    letter-spacing: 0.72px;
+    text-align: left;
+}
+
+.choosequan
+{
+    position: absolute; 
+    left:747px;
+    top:220px;
+    z-index: 5;
+}
+
+.glazing
+{
+    position: absolute; 
+    left:747px;
+    top:285px;
+    z-index: 5;
+    
+}
+
+
+
+
+
+#addtocart
+{
+    position: absolute; 
+    left:750px;
+    top:400px;
+    z-index: 10;
+    
+}
+
+#checkout
+{
+    position: absolute; 
+    left:950px;
+    top:400px;
+    z-index: 10;
+}
+
+
+
+#show-cart{
+    position: absolute; 
+    left:500px;
+    top:200px;
+    z-index: 5;
+    font-family: AvenirNextCondensed-DemiBold;
+    font-size: 24px;
+    color: rgba(0,0,0,0.65);
+    letter-spacing: 0.72px;
+    text-align: left;
+}
+
+
+
+
+#countInfo{
+        position: absolute; 
+    left:530px;
+    top:200px;
+    z-index: 5;
+    font-family: AvenirNextCondensed-regular;
+    font-size: 18px;
+
+    color: darkgray;
+    letter-spacing: 0.72px;
+    text-align: left;
+    line-height: 0;
+    
+}
+
+#total-cart{
+        font-family: AvenirNextCondensed-DemiBold;
+    font-size: 20px;
+    color:dimgrey;
+}
+
+
+
+
+.smallText
+{
+    display: inline-block;
+    font-family: AvenirNextCondensed-regular;
+    font-size: 22px;
+    color: grey;
+}
+
+#checkout2{
+    position: absolute; 
+    left:1100px;
+    top:500px;
+}
+
+
+

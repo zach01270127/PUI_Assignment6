@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Products | BunBun Bake Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+    
+<body>
+        
+    <a href="Home.html"><img class="logo" alt="BunBunBakeShop" src="assets/logo.png" ></a>
+    <img class="r3" alt="rec3" src="assets/rectangle1.png" >
+    <div class="shoppingcart">
+        <a href="ShoppingCart.html"><img class="shoppingcart" alt="ShoppingCart" src="assets/shopping_cart.png" ></a>
+    <p class="cartNumber" id="count-cart" >0</p>
+    </div>    
+        
+    <nav>
+          <a class="other" href="Home.html">Home</a> 
+          <a class="chosen" href="Product.html" >All Products</a> 
+          <a class="other">Shipping</a> 
+          <a class="other">About</a>
+
+    </nav>
+    
+    <div id="original">
+        <img id="originalimg" alt="Original" class="product1" src="assets/original.png" >
+        <p class="prdctname">Original&nbsp;&nbsp;&nbsp;&nbsp;$3/ea</p>
+        <button class="button button2" onclick="location.href='Original.html'" type="button">See Details</button>
+        
+    </div>
+    
+    
+    <div id="blackberry">
+        <img class="product1" alt="BlackBerry" src="assets/blackberry.png" >
+        <p class="prdctname">Blackberry&nbsp;&nbsp;&nbsp;&nbsp;$3/ea</p>
+        <button class="button button2" onclick="location.href='Blackberry.html'" type="button">See Details</button>
+        
+    </div>
+    
+    
+    <div id="walnut">
+        <img class="product1" alt="Walnut" src="assets/walnut.png" >
+        <p class="prdctname">Walnut&nbsp;&nbsp;&nbsp;&nbsp;$3/ea</p>
+        <button class="button button2" onclick="location.href='Walnut.html'" type="button">See Details</button>
+        
+    </div>
+    
+    
+    <div id="peacon">
+        <img class="product1" alt="Peacon" src="assets/caramel.png" >
+        <p class="prdctname">Caramel-Peacon&nbsp;&nbsp;&nbsp;&nbsp;$3/ea</p>
+        <button class="button button2"  onclick="location.href='Caramel.html'" type="button">See Details</button>
+        
+    </div>
+    
+    
+    <div id="pumpkin">
+        <img class="product1" alt="Pumpkin" src="assets/pumpkin.png" >
+        <p class="prdctname">Pumkin Spice&nbsp;&nbsp;&nbsp;&nbsp;$3/ea</p>
+        <button class="button button2" onclick="location.href='Pumpkin.html'" type="button">See Details</button>
+        
+    </div>
+    
+    
+    <div id="glutenfree">
+        <img class="product1" alt="GlutenFree" src="assets/glutenfree.png" >
+        <p class="prdctname">Gluten-free&nbsp;&nbsp;&nbsp;&nbsp;$3/ea</p>
+        <button class="button button2" onclick="location.href='GlutenFree.html'" type="button">See Details</button>
+        
+    </div>
+    
+
+    <script src="main.js"></script>
+    
+     <script>
+
+         shoppingCart.loadCart();  
+         
+         function displaytCart(){
+                var cartArray = shoppingCart.listCart();
+                var output = "";
+                
+                for (var i in cartArray){
+                    output += "<li>"
+                        +cartArray[i].count+" "+cartArray[i].name+" "+" bun " + " <div class='smallText'>with</div> "+cartArray[i].glazing+" glazing "+"<button class='delete-item button' data-glazing='"+cartArray[i].glazing+"'>Remove</button>  "
+                    "</li>"
+                }
+                    $("#show-cart").html(output);
+                    $("#count-cart").html(shoppingCart.countCart());
+                    $("#total-cart").html(shoppingCart.totalCart());
+                    $("#count-cart2").html(shoppingCart.countCart());
+            }
+            
+            $("#show-cart").on("click",".delete-item",function(event){    
+                var glazing = $(this).attr("data-glazing");
+                shoppingCart.removeItemToCartAll(glazing);
+                displaytCart();
+                
+            });
+
+        
+
+            displaytCart(); 
+            
+                
+            
+            
+            
+            
+            
+            
+            
+
+        </script>
+    
+
+
+
+
+    
+    
